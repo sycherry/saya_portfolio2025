@@ -18,6 +18,9 @@ Saya
 Github: https://github.com/sycherry
 A Community Lead specializing in localization, with experience adapting global blockchain products for the Japanese market, and serving as a bridge between Japanese users and global teams to improve community engagement and communication.
 
+Built with Claude Code.
+Source code: https://github.com/sycherry/saya_portfolio2025
+
 SKILLSET
 
 Community

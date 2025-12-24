@@ -394,8 +394,28 @@ function ContactSection() {
 function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-zinc-200 dark:border-zinc-800">
-      <div className="max-w-6xl mx-auto text-center text-sm text-zinc-500 dark:text-zinc-400">
+      <div className="max-w-6xl mx-auto text-center text-sm text-zinc-500 dark:text-zinc-400 space-y-2">
         <p>&copy; {new Date().getFullYear()} Saya. All rights reserved.</p>
+        <p>
+          Built with{" "}
+          <a
+            href="https://claude.ai/claude-code"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-500 hover:underline"
+          >
+            Claude Code
+          </a>
+          {" | "}
+          <a
+            href="https://github.com/sycherry/saya_portfolio2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-500 hover:underline"
+          >
+            Source Code
+          </a>
+        </p>
       </div>
     </footer>
   );
