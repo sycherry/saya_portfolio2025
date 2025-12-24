@@ -193,10 +193,21 @@ function HeroSection() {
           </p>
         </div>
         <div className="opacity-0 animate-fade-in-up animation-delay-400">
-          <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto mb-6 leading-relaxed">
             A Community Lead specializing in localization, with experience adapting global blockchain
             products for the Japanese market, and serving as a bridge between Japanese
             users and global teams to improve community engagement and communication.
+          </p>
+          <p className="text-sm text-zinc-400 dark:text-zinc-500 mb-12">
+            Built with Claude Code ·{" "}
+            <a
+              href="https://github.com/sycherry/saya_portfolio2025"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-500 hover:underline"
+            >
+              Source code
+            </a>
           </p>
         </div>
         <div className="opacity-0 animate-fade-in-up animation-delay-600 flex justify-center gap-4 flex-wrap">
@@ -397,16 +408,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto text-center text-sm text-zinc-500 dark:text-zinc-400 space-y-2">
         <p>&copy; {new Date().getFullYear()} Saya. All rights reserved.</p>
         <p>
-          Built with{" "}
-          <a
-            href="https://claude.ai/claude-code"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-500 hover:underline"
-          >
-            Claude Code
-          </a>
-          {" | "}
+          Built with Claude Code |{" "}
           <a
             href="https://github.com/sycherry/saya_portfolio2025"
             target="_blank"
