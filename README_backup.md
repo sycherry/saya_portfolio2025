@@ -53,6 +53,33 @@ Collaboration
 Slack / Lark / Trello / Miro / Notion
 Cross-functional collaboration
 
+## Featured Project 
+🎄 Christmas Tree Decorator 2025
+
+Web app built in 3 hours pair programming with Claude Code.
+
+【Experiment】
+Testing how complex interactions can be implemented
+through AI-agent collaboration.
+
+【What I Asked Claude Code】
+- Implement drag & drop (AI chose dnd-kit by itself)
+- "Can't scroll on mobile" → Fixed immediately
+- "Ornaments won't go inside the tree" → Improved shape recognition
+
+【Results】
+Production-ready app completed through natural conversation in Japanese.
+Lightning-fast cycle: understand code → implement → test → fix.
+
+Tech: Next.js / React / dnd-kit
+Human: Requirements, UX feedback
+Claude Code: Implementation, debugging, optimization
+
+→ This is how we build in 2025 🤖
+
+Demo: https://xmas-tree-decorator2025.vercel.app/
+GitHub: https://github.com/sycherry/xmas-tree-decorator2025
+
 
 EXPERIENCE
 ### Head of Japan Operations
