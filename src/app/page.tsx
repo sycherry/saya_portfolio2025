@@ -134,6 +134,54 @@ function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    {
+      href: "#about",
+      label: "About",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
+    },
+    {
+      href: "#projects",
+      label: "Projects",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+        </svg>
+      ),
+    },
+    {
+      href: "#skills",
+      label: "Skills",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+    },
+    {
+      href: "#experience",
+      label: "Experience",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      href: "#contact",
+      label: "Contact",
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -144,22 +192,18 @@ function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <span className="font-semibold text-lg">Saya</span>
-        <div className="flex gap-6 text-sm">
-          <a href="#about" className="hover:text-indigo-500 transition-colors">
-            About
-          </a>
-          <a href="#projects" className="hover:text-indigo-500 transition-colors">
-            Projects
-          </a>
-          <a href="#skills" className="hover:text-indigo-500 transition-colors">
-            Skills
-          </a>
-          <a href="#experience" className="hover:text-indigo-500 transition-colors">
-            Experience
-          </a>
-          <a href="#contact" className="hover:text-indigo-500 transition-colors">
-            Contact
-          </a>
+        <div className="flex gap-4 md:gap-6 text-sm">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="flex items-center gap-1.5 hover:text-indigo-500 transition-colors"
+              title={link.label}
+            >
+              {link.icon}
+              <span className="hidden md:inline">{link.label}</span>
+            </a>
+          ))}
         </div>
       </div>
     </nav>
@@ -265,36 +309,44 @@ function FeaturedProjectSection() {
             />
           </div>
           <div className="p-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm font-medium rounded-full">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Built with Claude Code
+          </div>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl">🎄</span>
             <h3 className="text-2xl font-bold">Christmas Tree Decorator 2025</h3>
           </div>
           <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-            Web app built in 3 hours pair programming with Claude Code.
+            Built a Web App in Two Days Through Pair Programming with{" "}
+            <span className="font-semibold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Claude Code</span>
           </p>
 
           <div className="space-y-6">
             <div>
               <h4 className="font-semibold text-indigo-500 mb-2">Experiment</h4>
               <p className="text-zinc-600 dark:text-zinc-400">
-                Testing how complex interactions can be implemented through AI-agent collaboration.
+                Testing how far application development can go through collaboration with{" "}
+                <span className="font-semibold bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Claude Code</span>.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-indigo-500 mb-2">What I Asked Claude Code</h4>
+              <h4 className="font-semibold text-indigo-500 mb-2">What I Asked <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Claude Code</span> to Do</h4>
               <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0" />
-                  Implement drag & drop (AI chose dnd-kit by itself)
+                  Implement drag & drop → The AI autonomously chose dnd-kit
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0" />
-                  "Can't scroll on mobile" → Fixed immediately
+                  "Ornaments won't go inside the tree" → Improved the shape recognition logic
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0" />
-                  "Ornaments won't go inside the tree" → Improved shape recognition
+                  Implemented more involved features such as GIF export and image cropping without errors
                 </li>
               </ul>
             </div>
@@ -302,8 +354,8 @@ function FeaturedProjectSection() {
             <div>
               <h4 className="font-semibold text-indigo-500 mb-2">Results</h4>
               <p className="text-zinc-600 dark:text-zinc-400">
-                Production-ready app completed through natural conversation in Japanese.
-                Lightning-fast cycle: understand code → implement → test → fix.
+                A production-ready application was completed through natural conversation alone.
+                Confirmed an extremely fast development cycle: understand → implement → test → fix.
               </p>
             </div>
 
